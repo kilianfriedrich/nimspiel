@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="50.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal">
+   <Text layoutX="50.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0"
+         text="No games available. You can create one below."/>
+</AnchorPane>

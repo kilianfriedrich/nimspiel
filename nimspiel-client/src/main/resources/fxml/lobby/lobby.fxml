@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <ScrollPane hbarPolicy="NEVER" prefHeight="550.0" prefWidth="400.0">
+      <VBox fx:id="gameContainer" />
+   </ScrollPane>
+   <Button layoutX="287.0" layoutY="555.0" mnemonicParsing="false" prefWidth="108.0" onAction="#joinNewGame" text="Create game" focusTraversable="false" />
+   <TextField fx:id="gameNameField" layoutX="9.0" layoutY="555.0" onAction="#joinNewGame" prefHeight="25.0" prefWidth="275.0" promptText="Enter name of new game" />
+   <Text fx:id="errField" fill="RED" layoutX="9.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+</AnchorPane>

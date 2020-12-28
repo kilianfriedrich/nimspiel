@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="170.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <TextField fx:id="serverIPField" layoutX="15.0" layoutY="25.0" prefHeight="25.0" prefWidth="210.0" promptText="Server IP" text="127.0.0.1" />
+   <TextField fx:id="serverPortField" layoutX="226.0" layoutY="25.0" prefHeight="25.0" prefWidth="65" promptText="Port" text="5456" />
+   <TextField fx:id="usernameField" layoutX="15.0" layoutY="70.0" onAction="#signup" prefHeight="25.0" prefWidth="210.0" promptText="Your username" />
+   <Button focusTraversable="false" layoutX="226.0" layoutY="70.0" mnemonicParsing="false" onAction="#signup" text="Sign-Up" />
+   <Text fx:id="errField" fill="RED" layoutX="15.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   <Button focusTraversable="false" layoutX="15.0" layoutY="110.0" prefWidth="275.0" mnemonicParsing="false" onAction="#singlePlayer" text="Single-Player" />
+</AnchorPane>

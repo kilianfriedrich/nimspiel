@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane fx:id="parent" prefHeight="50.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" >
+    <Text fx:id="gameNameField" layoutX="15.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0"
+          style="-fx-font-weight: bold;" text="Name"/>
+    <Text fx:id="creatorNameField" layoutX="15.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creator"/>
+    <Button onAction="#join" layoutX="348.0" layoutY="13.0" mnemonicParsing="false" text="Join" focusTraversable="false" />
+</AnchorPane>
