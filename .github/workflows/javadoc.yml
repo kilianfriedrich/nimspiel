@@ -39,19 +39,19 @@ jobs:
         run: cp nimspiel-server/target/site/apidocs/. docs/server
 
       - name: Tidy up the main javadocs
-        id: tidy
+        id: tidy1
         uses: cicirello/javadoc-cleanup@v1.2.0
         with:
           path-to-root: docs/main
 
       - name: Tidy up the client javadocs
-        id: tidy
+        id: tidy2
         uses: cicirello/javadoc-cleanup@v1.2.0
         with:
           path-to-root: docs/client
 
       - name: Tidy up the server javadocs
-        id: tidy
+        id: tidy3
         uses: cicirello/javadoc-cleanup@v1.2.0
         with:
           path-to-root: docs/server
