@@ -40,6 +40,9 @@ jobs:
       - name: Clear everything else
         run: ls -A | grep -v docs | xargs rm -rf
 
+      - name: ls
+        run: ls -A
+
       - name: Checkout gh-pages Pt. 1
         run: mkdir gh-pages && cd gh-pages
 
