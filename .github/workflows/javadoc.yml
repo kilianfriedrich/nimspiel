@@ -1,10 +1,8 @@
 name: "JavaDocs"
 
 on:
-  workflow_dispatch
   push:
     branches: [ master ]
-    paths: [ '**.java' ]
 
 jobs:
   generate-javadoc:
