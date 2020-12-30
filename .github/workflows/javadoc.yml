@@ -8,11 +8,8 @@ jobs:
   generate-javadoc:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repo
+      - name: Checkout master
         uses: actions/checkout@v2
-
-      - name: Remove git
-        run: rm -rf .git
 
       - name: Set up JDK 1.8
         uses: actions/setup-java@v1
@@ -22,20 +19,23 @@ jobs:
       - name: Build docs with Maven
         run: mvn javadoc:javadoc
 
-      - name: Remove docs folder
+      - name: Remove existing docs folder
         run: rm -rf ./docs
 
       - name: Create docs folder
         run: mkdir docs docs/main docs/client docs/server
 
       - name: Copy main docs
-        run: test -e target/site/apidocs cp target/site/apidocs docs/main
+        run: test -e target/site/apidocs && cp target/site/apidocs docs/main
 
       - name: Copy client docs
         run: test -e nimspiel-client/target/site/apidocs && cp nimspiel-client/target/site/apidocs docs/client
 
       - name: Copy server docs
         run: test -e nimspiel-server/target/site/apidocs && cp nimspiel-server/target/site/apidocs docs/server
+
+      - name: Clear everything else
+        run: ls -A | grep -v docs | xargs rm -rf
 
       - name: Checkout gh-pages Pt. 1
         run: mkdir gh-pages && cd gh-pages
