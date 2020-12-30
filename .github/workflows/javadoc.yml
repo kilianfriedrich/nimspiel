@@ -50,7 +50,7 @@ jobs:
 
       - name: Commit documentation changes
         run: |
-            test -e docs && rm -rf docs
+            rm -rf docs || true
             cp ../docs .
             git config --global user.name 'Kilian Friedrich'
             git config --global user.email 'kilianfriedrich@users.noreply.github.com'
