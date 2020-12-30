@@ -23,10 +23,10 @@ jobs:
         run: mvn javadoc:javadoc
 
       - name: Remove docs folder
-        run: rm -rf ./newdocs
+        run: rm -rf ./docs
 
       - name: Create docs folder
-        run: mkdir docs newdocs/main newdocs/client docs/server
+        run: mkdir docs docs/main docs/client docs/server
 
       - name: Copy main docs
         run: cp target/site/apidocs/. docs/main
