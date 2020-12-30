@@ -29,13 +29,13 @@ jobs:
         run: mkdir docs docs/main docs/client docs/server
 
       - name: Copy main docs
-        run: cp target/site/apidocs/. docs/main
+        run: test -e target/site/apidocs cp target/site/apidocs docs/main
 
       - name: Copy client docs
-        run: cp nimspiel-client/target/site/apidocs/. docs/client
+        run: test -e nimspiel-client/target/site/apidocs && cp nimspiel-client/target/site/apidocs docs/client
 
       - name: Copy server docs
-        run: cp nimspiel-server/target/site/apidocs/. docs/server
+        run: test -e nimspiel-server/target/site/apidocs && cp nimspiel-server/target/site/apidocs docs/server
 
       - name: Checkout gh-pages Pt. 1
         run: mkdir gh-pages && cd gh-pages
