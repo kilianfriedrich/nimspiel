@@ -27,12 +27,15 @@ jobs:
 
       - name: Copy main docs
         run: test -e target/site/apidocs && cp target/site/apidocs docs/main
+        continue-on-error: true
 
       - name: Copy client docs
         run: test -e nimspiel-client/target/site/apidocs && cp nimspiel-client/target/site/apidocs docs/client
+        continue-on-error: true
 
       - name: Copy server docs
         run: test -e nimspiel-server/target/site/apidocs && cp nimspiel-server/target/site/apidocs docs/server
+        continue-on-error: true
 
       - name: Clear everything else
         run: ls -A | grep -v docs | xargs rm -rf
