@@ -9,35 +9,37 @@ import java.util.concurrent.TimeoutException;
 /**
  * The NP (Nimspiel Protocol):
  * Possible Client request:
- *  - login (username)
- *    --> signs the user up / assigns the username to its IP and port
- *  - join (gameid)
- *    --> joins a game with the UUID (gameid)
- *  - leave
- *    --> leaves the current game
- *  - create (gamename)
- *    --> creates a new game called (gamename)
- *  - pick (amount)
- *    --> picks a certain amount of sticks in a game
- *
+ * <ul>
+ * <li> login (username)
+ *    --&gt; signs the user up / assigns the username to its IP and port </li>
+ * <li> join (gameid)
+ *    --&gt; joins a game with the UUID (gameid) </li>
+ * <li> leave
+ *    --&gt; leaves the current game
+ * <li> create (gamename)
+ *    --&gt; creates a new game called (gamename) </li>
+ * <li> pick (amount)
+ *    --&gt; picks a certain amount of sticks in a game </li>
+ * </ul>
  * Possible Server answers/notifications:
- *  - gamelobbies (gamename 1) (gameid 1) (creator 1) ... (gamename n) (gameid n) (creator n)
- *    --> gives a list of open games, is sent after a user's 'login' request
- *  - ok | error
- *    --> response to a 'leave' or 'pick' request
- *  - ok (start) | error
- *    --> response to a 'join' request, (start) is either 0 (opponent starts) or 1 (you start)
- *  - ok (gameid)
- *    --> response to a 'create' request, (gameid) is an UUID
- *  - addGame (gamename) (gameid) (creator)
- *    --> when a user created a new game to display in the lobby
- *  - delGame (gameid)
- *    --> when a game is full or everyone left, so it doesn't have to be listed any longer
- *  - updatefield (amount)
- *    --> when the opponent picked sticks
- *  - playerjoinedmatch (opponent) (start)
- *    --> when (opponent) joined your game, (start) is either 0 (opponent starts) or 1 (you start)
- *
+ * <ul>
+ * <li> gamelobbies (gamename 1) (gameid 1) (creator 1) ... (gamename n) (gameid n) (creator n)
+ *    --&gt; gives a list of open games, is sent after a user's 'login' request </li>
+ * <li> ok | error
+ *    --&gt; response to a 'leave' or 'pick' request
+ * <li> ok (start) | error
+ *    --&gt; response to a 'join' request, (start) is either 0 (opponent starts) or 1 (you start) </li>
+ * <li> ok (gameid)
+ *    --&gt; response to a 'create' request, (gameid) is an UUID </li>
+ * <li> addGame (gamename) (gameid) (creator)
+ *    --&gt; when a user created a new game to display in the lobby </li>
+ * <li> delGame (gameid)
+ *    --&gt; when a game is full or everyone left, so it doesn't have to be listed any longer </li>
+ * <li> updatefield (amount)
+ *    --&gt; when the opponent picked sticks </li>
+ * <li> playerjoinedmatch (opponent) (start)
+ *    --&gt; when (opponent) joined your game, (start) is either 0 (opponent starts) or 1 (you start) </li>
+ * </ul>
  */
 public class NimspielClient extends Client {
 

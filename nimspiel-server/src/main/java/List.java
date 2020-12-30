@@ -3,17 +3,17 @@
  * Materialien zu den zentralen NRW-Abiturpruefungen im Fach Informatik ab 2018
  * </p>
  * <p>
- * Generische Klasse List<ContentType>
+ * Generische Klasse List&lt;ContentType&gt;
  * </p>
  * <p>
  * Objekt der generischen Klasse List verwalten beliebig viele linear
  * angeordnete Objekte vom Typ ContentType. Auf hoechstens ein Listenobjekt,
- * aktuellesObjekt genannt, kann jeweils zugegriffen werden.<br />
+ * aktuellesObjekt genannt, kann jeweils zugegriffen werden.<br>
  * Wenn eine Liste leer ist, vollstaendig durchlaufen wurde oder das aktuelle
- * Objekt am Ende der Liste geloescht wurde, gibt es kein aktuelles Objekt.<br />
+ * Objekt am Ende der Liste geloescht wurde, gibt es kein aktuelles Objekt.<br>
  * Das erste oder das letzte Objekt einer Liste koennen durch einen Auftrag zum
  * aktuellen Objekt gemacht werden. Ausserdem kann das dem aktuellen Objekt
- * folgende Listenobjekt zum neuen aktuellen Objekt werden. <br />
+ * folgende Listenobjekt zum neuen aktuellen Objekt werden. <br>
  * Das aktuelle Objekt kann gelesen, veraendert oder geloescht werden. Ausserdem
  * kann vor dem aktuellen Objekt ein Listenobjekt eingefuegt werden.
  * </p>
@@ -188,9 +188,9 @@ public class List<ContentType> {
   /**
    * Falls es ein aktuelles Objekt gibt (hasAccess() == true), wird ein neues
    * Objekt vor dem aktuellen Objekt in die Liste eingefuegt. Das aktuelle
-   * Objekt bleibt unveraendert. <br />
+   * Objekt bleibt unveraendert. <br>
    * Wenn die Liste leer ist, wird pContent in die Liste eingefuegt und es
-   * gibt weiterhin kein aktuelles Objekt (hasAccess() == false). <br />
+   * gibt weiterhin kein aktuelles Objekt (hasAccess() == false). <br>
    * Falls es kein aktuelles Objekt gibt (hasAccess() == false) und die Liste
    * nicht leer ist oder pContent gleich null ist, geschieht nichts.
    * 
@@ -229,9 +229,9 @@ public class List<ContentType> {
   }
 
   /**
-   * Falls pContent gleich null ist, geschieht nichts.<br />
+   * Falls pContent gleich null ist, geschieht nichts.<br>
    * Ansonsten wird ein neues Objekt pContent am Ende der Liste eingefuegt.
-   * Das aktuelle Objekt bleibt unveraendert. <br />
+   * Das aktuelle Objekt bleibt unveraendert. <br>
    * Wenn die Liste leer ist, wird das Objekt pContent in die Liste eingefuegt
    * und es gibt weiterhin kein aktuelles Objekt (hasAccess() == false).
    * 
@@ -257,13 +257,13 @@ public class List<ContentType> {
 
   /**
    * Falls es sich bei der Liste und pList um dasselbe Objekt handelt,
-   * pList null oder eine leere Liste ist, geschieht nichts.<br />
+   * pList null oder eine leere Liste ist, geschieht nichts.<br>
    * Ansonsten wird die Liste pList an die aktuelle Liste angehaengt.
    * Anschliessend wird pList eine leere Liste. Das aktuelle Objekt bleibt
    * unveraendert. Insbesondere bleibt hasAccess identisch.
    * 
    * @param pList
-   *            die am Ende anzuhaengende Liste vom Typ List<ContentType>
+   *            die am Ende anzuhaengende Liste vom Typ List&lt;ContentType&gt;
    */
   public void concat(List<ContentType> pList) {
     if (pList != this && pList != null && !pList.isEmpty()) { // Nichts tun,
@@ -286,10 +286,10 @@ public class List<ContentType> {
 
   /**
    * Wenn die Liste leer ist oder es kein aktuelles Objekt gibt (hasAccess()
-   * == false), geschieht nichts.<br />
+   * == false), geschieht nichts.<br>
    * Falls es ein aktuelles Objekt gibt (hasAccess() == true), wird das
    * aktuelle Objekt geloescht und das Objekt hinter dem geloeschten Objekt
-   * wird zum aktuellen Objekt. <br />
+   * wird zum aktuellen Objekt. <br>
    * Wird das Objekt, das am Ende der Liste steht, geloescht, gibt es kein
    * aktuelles Objekt mehr.
    */
